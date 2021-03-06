@@ -1,29 +1,456 @@
-<html>
-  <head>
-    <title> Index </title>
-  </head>
-  <body>
-    <h2>Event-Driven Programming</h2>
-    
-    <h4>Test</h4>
-  </body>
-</html>
-
-<!--- 
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Git Demonstration</title>
+    <title>PA-2</title>
 </head>
-
 <body>
-    <h1>Event-Driven Programming</h1>
-    <h4>Developed by: Dodong Laboriki</h4>
-</body>
+    <table id="tbldata" style="border: black 1px solid; align-self: center;">
+        <thead style="border: black 1px solid;">
+            <tr>
+                <th>
+                    <th>
+                        <th>
+                            <td name="month"></td>
+                        </th>
+                    </th>
+                    <tr>
+                        
+                        <td name="dy">SUN</td>
+                        <td name="dy">MON</td>
+                        <td name="dy">TUE</td>
+                        <td name="dy">WED</td>
+                        <td name="dy">THU</td>
+                        <td name="dy">FRI</td>
+                        <td name="dy">SAT</td>
+                    </tr>
+                </th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+    <script src="js/data.js"></script>
+    <script>
+        //console.log(data);
+        //let tbody = document.getElementById("tbldata").getElementsByTagName("tbody")[0];
+        let imonth = prompt("Month (1-12)","1");
+        let iday = prompt("Start Day (1-7)","2");
 
+        let a = document.getElementsByName("month");
+        let b = document.getElementsByName("days");
+        let dy = document.getElementsByName("dy");
+        
+        for(i = 0; i < 7; i++)
+            dy[i].setAttribute("style","border: 1px solid black; padding:10px; padding-left: 20px; padding-right: 20px; text-align:center; position:relative;");
+        dy[0].setAttribute("style","border: 1px solid black; padding:10px; padding-left: 20px; padding-right: 20px; background-color:red; color:white;")
+        //a[0].setAttribute("style","display: inline-block;font-size: 24px;margin-top: 0.67em;margin-bottom: 0.67em;margin-left: 0;margin-right: 0;font-weight: bold; padding-left:30px;")
+            //a[0].innerHTML = imonth;
+        let tbody = document.getElementById("tbldata").getElementsByTagName("tbody")[0];
+        let day = 0;
+        
+        switch (imonth){
+            case '1':
+            day = 31;
+                for(id of data){
+                    if(imonth == id['id']){
+                        imonth = id['mon'];
+                        a[0].setAttribute("style","text-align: center;font-weight:bold;font-size:24px;");
+                        id.innerHTML = imonth;
+                        console.log(imonth);
+                        a[0].innerHTML = imonth;
+                    }
+                }
+                //for finding the days
+                for(i = 1; i <= 31; i++){
+                    
+                    for(ii = iday; ii < 7; ii++){
+                        /*let cellBlank = newRow.insertCell();
+                        cellBlank.innerText = " ";
+                        cellid.setAttribute("style","border: 1px solid black; text-align;center;padding 20px;");*/
+                    }
+                    while(i <= 31){
+                        let newRow = tbody.insertRow();
+                        newRow.setAttribute("style","border: 1px solid black;");
+                        for(ind = 0; ind < 7; ind++){
+                            //console.log(cellId.innerText = i);
+                            let cellId = newRow.insertCell(-1);
+                            cellId.innerText = i;
+                            cellId.setAttribute("style","border: 1px solid black; text-align:center;");
+                            i++;
+                            if(i == 25){ind = 8;}
+                        }
+                    }
+                }
+            break;
+            case '2':
+            day = 28;    
+                for(id of data){
+                    if(imonth == id['id']){
+                        imonth = id['mon'];
+                        a[0].setAttribute("style","text-align: center;font-weight:bold;font-size:24px;");
+                        id.innerHTML = imonth;
+                        console.log(imonth);
+                        a[0].innerHTML = imonth;
+                    }
+                }
+                for(i = 1; i <= 28; i++){
+                    
+                    for(ii = iday; ii < 7; ii++){
+                        /*let cellBlank = newRow.insertCell();
+                        cellBlank.innerText = " ";
+                        cellid.setAttribute("style","border: 1px solid black; text-align;center;padding 20px;");*/
+                    }
+                    while(i <= 28){
+                        let newRow = tbody.insertRow();
+                        newRow.setAttribute("style","border: 1px solid black;");
+                        for(ind = 0; ind < 7; ind++){
+                            //console.log(cellId.innerText = i);
+                            let cellId = newRow.insertCell(-1);
+                            cellId.innerText = i;
+                            cellId.setAttribute("style","border: 1px solid black; text-align:center;");
+                            i++;
+                            if(i == 22){ind = 8;}
+                        }
+                    }
+                }    
+                break;
+            case '3':
+                day = 31;  
+                console.log(day);
+                for(id of data){
+                    if(imonth == id['id']){
+                        imonth = id['mon'];
+                        a[0].setAttribute("style","text-align: center;font-weight:bold;font-size:24px;");
+                        id.innerHTML = imonth;
+                        console.log(imonth);
+                        a[0].innerHTML = imonth;
+                    }
+                }
+                for(i = 1; i <= 31; i++){
+                    
+                    for(ii = iday; ii < 7; ii++){
+                        /*let cellBlank = newRow.insertCell();
+                        cellBlank.innerText = " ";
+                        cellid.setAttribute("style","border: 1px solid black; text-align;center;padding 20px;");*/
+                    }
+                    while(i <= 31){
+                        let newRow = tbody.insertRow();
+                        newRow.setAttribute("style","border: 1px solid black;");
+                        for(ind = 0; ind < 7; ind++){
+                            //console.log(cellId.innerText = i);
+                            let cellId = newRow.insertCell(-1);
+                            cellId.innerText = i;
+                            cellId.setAttribute("style","border: 1px solid black; text-align:center;");
+                            i++;
+                            if(i == 25){ind = 8;}
+                        }
+                    }
+                } 
+                break;
+            case '4':
+                day = 30;
+                for(id of data){
+                    if(imonth == id['id']){
+                        imonth = id['mon'];
+                        a[0].setAttribute("style","text-align: center;font-weight:bold;font-size:24px;");
+                        id.innerHTML = imonth;
+                        console.log(imonth);
+                        a[0].innerHTML = imonth;
+                    }
+                }
+                for(i = 1; i <= 30; i++){
+                    
+                    for(ii = iday; ii < 7; ii++){
+                        /*let cellBlank = newRow.insertCell();
+                        cellBlank.innerText = " ";
+                        cellid.setAttribute("style","border: 1px solid black; text-align;center;padding 20px;");*/
+                    }
+                    while(i <= 30){
+                        let newRow = tbody.insertRow();
+                        newRow.setAttribute("style","border: 1px solid black;");
+                        for(ind = 0; ind < 7; ind++){
+                            //console.log(cellId.innerText = i);
+                            let cellId = newRow.insertCell(-1);
+                            cellId.innerText = i;
+                            cellId.setAttribute("style","border: 1px solid black; text-align:center;");
+                            i++;
+                            if(i == 24){ind = 8;}
+                        }
+                    }
+                } 
+                break;
+            case '5':
+                day = 31;
+                for(id of data){
+                    if(imonth == id['id']){
+                        imonth = id['mon'];
+                        a[0].setAttribute("style","text-align: center;font-weight:bold;font-size:24px;");
+                        id.innerHTML = imonth;
+                        console.log(imonth);
+                        a[0].innerHTML = imonth;
+                    }
+                }
+                for(i = 1; i <= 31; i++){
+                    
+                    for(ii = iday; ii < 7; ii++){
+                        /*let cellBlank = newRow.insertCell();
+                        cellBlank.innerText = " ";
+                        cellid.setAttribute("style","border: 1px solid black; text-align;center;padding 20px;");*/
+                    }
+                    while(i <= 31){
+                        let newRow = tbody.insertRow();
+                        newRow.setAttribute("style","border: 1px solid black;");
+                        for(ind = 0; ind < 7; ind++){
+                            //console.log(cellId.innerText = i);
+                            let cellId = newRow.insertCell(-1);
+                            cellId.innerText = i;
+                            cellId.setAttribute("style","border: 1px solid black; text-align:center;");
+                            i++;
+                            if(i == 25){ind = 8;}
+                        }
+                    }
+                } 
+                break;
+            case '6':
+                day = 30;
+                for(id of data){
+                    if(imonth == id['id']){
+                        imonth = id['mon'];
+                        a[0].setAttribute("style","text-align: center;font-weight:bold;font-size:24px;");
+                        id.innerHTML = imonth;
+                        console.log(imonth);
+                        a[0].innerHTML = imonth;
+                    }
+                }
+                for(i = 1; i <= 30; i++){
+                    
+                    for(ii = iday; ii < 7; ii++){
+                        /*let cellBlank = newRow.insertCell();
+                        cellBlank.innerText = " ";
+                        cellid.setAttribute("style","border: 1px solid black; text-align;center;padding 20px;");*/
+                    }
+                    while(i <= 30){
+                        let newRow = tbody.insertRow();
+                        newRow.setAttribute("style","border: 1px solid black;");
+                        for(ind = 0; ind < 7; ind++){
+                            //console.log(cellId.innerText = i);
+                            let cellId = newRow.insertCell(-1);
+                            cellId.innerText = i;
+                            cellId.setAttribute("style","border: 1px solid black; text-align:center;");
+                            i++;
+                            if(i == 24){ind = 8;}
+                        }
+                    }
+                } 
+                break;
+            case '7':
+                day = 31;
+                for(id of data){
+                    if(imonth == id['id']){
+                        imonth = id['mon'];
+                        a[0].setAttribute("style","text-align: center;font-weight:bold;font-size:24px;");
+                        id.innerHTML = imonth;
+                        console.log(imonth);
+                        a[0].innerHTML = imonth;
+                    }
+                }
+                for(i = 1; i <= 31; i++){
+                    
+                    for(ii = iday; ii < 7; ii++){
+                        /*let cellBlank = newRow.insertCell();
+                        cellBlank.innerText = " ";
+                        cellid.setAttribute("style","border: 1px solid black; text-align;center;padding 20px;");*/
+                    }
+                    while(i <= 31){
+                        let newRow = tbody.insertRow();
+                        newRow.setAttribute("style","border: 1px solid black;");
+                        for(ind = 0; ind < 7; ind++){
+                            //console.log(cellId.innerText = i);
+                            let cellId = newRow.insertCell(-1);
+                            cellId.innerText = i;
+                            cellId.setAttribute("style","border: 1px solid black; text-align:center;");
+                            i++;
+                            if(i == 25){ind = 8;}
+                        }
+                    }
+                } 
+                break;
+            case '8':
+                day = 31;
+                for(id of data){
+                    if(imonth == id['id']){
+                        imonth = id['mon'];
+                        a[0].setAttribute("style","text-align: center;font-weight:bold;font-size:24px;");
+                        id.innerHTML = imonth;
+                        console.log(imonth);
+                        a[0].innerHTML = imonth;
+                    }
+                }
+                for(i = 1; i <= 31; i++){
+                    
+                    for(ii = iday; ii < 7; ii++){
+                        /*let cellBlank = newRow.insertCell();
+                        cellBlank.innerText = " ";
+                        cellid.setAttribute("style","border: 1px solid black; text-align;center;padding 20px;");*/
+                    }
+                    while(i <= 31){
+                        let newRow = tbody.insertRow();
+                        newRow.setAttribute("style","border: 1px solid black;");
+                        for(ind = 0; ind < 7; ind++){
+                            //console.log(cellId.innerText = i);
+                            let cellId = newRow.insertCell(-1);
+                            cellId.innerText = i;
+                            cellId.setAttribute("style","border: 1px solid black; text-align:center;");
+                            i++;
+                            if(i == 25){ind = 8;}
+                        }
+                    }
+                } 
+                break;
+            case '9':
+                day = 30;
+                for(id of data){
+                    if(imonth == id['id']){
+                        imonth = id['mon'];
+                        a[0].setAttribute("style","text-align: center;font-weight:bold;font-size:24px;");
+                        id.innerHTML = imonth;
+                        console.log(imonth);
+                        a[0].innerHTML = imonth;
+                    }
+                }
+                for(i = 1; i <= 30; i++){
+                    
+                    for(ii = iday; ii < 7; ii++){
+                        /*let cellBlank = newRow.insertCell();
+                        cellBlank.innerText = " ";
+                        cellid.setAttribute("style","border: 1px solid black; text-align;center;padding 20px;");*/
+                    }
+                    while(i <= 30){
+                        let newRow = tbody.insertRow();
+                        newRow.setAttribute("style","border: 1px solid black;");
+                        for(ind = 0; ind < 7; ind++){
+                            //console.log(cellId.innerText = i);
+                            let cellId = newRow.insertCell(-1);
+                            cellId.innerText = i;
+                            cellId.setAttribute("style","border: 1px solid black; text-align:center;");
+                            i++;
+                            if(i == 24){ind = 8;}
+                        }
+                    }
+                } 
+                break;
+            case '10':
+                day = 31;
+                for(id of data){
+                    if(imonth == id['id']){
+                        imonth = id['mon'];
+                        a[0].setAttribute("style","text-align: center;font-weight:bold;font-size:24px;");
+                        id.innerHTML = imonth;
+                        console.log(imonth);
+                        a[0].innerHTML = imonth;
+                    }
+                }
+                for(i = 1; i <= 31; i++){
+                    
+                    for(ii = iday; ii < 7; ii++){
+                        /*let cellBlank = newRow.insertCell();
+                        cellBlank.innerText = " ";
+                        cellid.setAttribute("style","border: 1px solid black; text-align;center;padding 20px;");*/
+                    }
+                    while(i <= 31){
+                        let newRow = tbody.insertRow();
+                        newRow.setAttribute("style","border: 1px solid black;");
+                        for(ind = 0; ind < 7; ind++){
+                            //console.log(cellId.innerText = i);
+                            let cellId = newRow.insertCell(-1);
+                            cellId.innerText = i;
+                            cellId.setAttribute("style","border: 1px solid black; text-align:center;");
+                            i++;
+                            if(i == 25){ind = 8;}
+                        }
+                    }
+                } 
+                break;
+            case '11':
+                day = 30;
+                for(id of data){
+                    if(imonth == id['id']){
+                        imonth = id['mon'];
+                        a[0].setAttribute("style","text-align: center;font-weight:bold;font-size:24px;");
+                        id.innerHTML = imonth;
+                        console.log(imonth);
+                        a[0].innerHTML = imonth;
+                    }
+                }
+                for(i = 1; i <= 30; i++){
+                    
+                    for(ii = iday; ii < 7; ii++){
+                        /*let cellBlank = newRow.insertCell();
+                        cellBlank.innerText = " ";
+                        cellid.setAttribute("style","border: 1px solid black; text-align;center;padding 20px;");*/
+                    }
+                    while(i <= 30){
+                        let newRow = tbody.insertRow();
+                        newRow.setAttribute("style","border: 1px solid black;");
+                        for(ind = 0; ind < 7; ind++){
+                            //console.log(cellId.innerText = i);
+                            let cellId = newRow.insertCell(-1);
+                            cellId.innerText = i;
+                            cellId.setAttribute("style","border: 1px solid black; text-align:center;");
+                            i++;
+                            if(i == 24){ind = 8;}
+                        }
+                    }
+                } 
+                break;
+            case '12':
+                day = 31;
+                for(id of data){
+                    if(imonth == id['id']){
+                        imonth = id['mon'];
+                        a[0].setAttribute("style","text-align: center;font-weight:bold;font-size:24px;");
+                        id.innerHTML = imonth;
+                        console.log(imonth);
+                        a[0].innerHTML = imonth;
+                    }
+                }
+                for(i = 1; i <= 31; i++){
+                    
+                    for(ii = iday; ii < 7; ii++){
+                        /*let cellBlank = newRow.insertCell();
+                        cellBlank.innerText = " ";
+                        cellid.setAttribute("style","border: 1px solid black; text-align;center;padding 20px;");*/
+                    }
+                    while(i <= 31){
+                        let newRow = tbody.insertRow();
+                        newRow.setAttribute("style","border: 1px solid black;");
+                        for(ind = 0; ind < 7; ind++){
+                            //console.log(cellId.innerText = i);
+                            let cellId = newRow.insertCell(-1);
+                            cellId.innerText = i;
+                            cellId.setAttribute("style","border: 1px solid black; text-align:center;");
+                            i++;
+                            if(i == 25){ind = 8;}
+                        }
+                    }
+                } 
+                break;
+            default:
+                a[0].innerHTML = "Invalid Input";
+        }
+        
+        /*      
+                
+                
+                
+                
+        */
+    </script>
+</body>
 </html>
 --->
