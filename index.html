@@ -1,29 +1,70 @@
-<html>
-  <head>
-    <title> Index </title>
-  </head>
-  <body>
-    <h2>Event-Driven Programming</h2>
-    
-    <h4>Test</h4>
-  </body>
-</html>
-
-<!--- 
-
-<!DOCTYPE html>
+<!DOCTYPE  html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Git Demonstration</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/32d32f91d6.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>PA-3</title>
+    <style>
+
+    </style>
 </head>
-
 <body>
-    <h1>Event-Driven Programming</h1>
-    <h4>Developed by: Dodong Laboriki</h4>
-</body>
 
+    <form action="" id="form1">
+        <input type="number" name="Subtotal" id="iSubtotal"  placeholder="Subtotal" min="100" max="10000" onclick="test()" onkeypress="test()">
+        <label for="iSubtotal">User input from 100 to 10,000</label><br />
+
+        <input type="number" name="Tax" id="iTax" placeholder="Tax" disabled>
+        <label for="iTax"> +12% Tax </label><br />
+
+        <input type="number" name="Total" id="iTotal" placeholder="Total" disabled>
+        <label for="iTotal">Subtotal + Tax</label><br />
+
+        <input type="number" name="Amtpaid" id="iAmtpaid" placeholder="Amount Paid" onclick="test1()" onkeypress="test1()" disabled>
+        <label for="iAmtpaid">Minimum is base on Subtotal + Tax</label><br />
+
+        <input type="number" name="Change" id="iChange" placeholder="Change" disabled>
+        <label for="iChange">Amount Paid - Total</label> <br />
+
+        <button type="button" id="btn1" disabled>Pay</button>
+    </form>
+    
+    <script>
+    function test(){
+        var x = document.getElementById("iSubtotal").value;
+        x = parseInt(x);
+        
+        //console.log(x);
+        if(x >= 100){
+            document.getElementById("iAmtpaid").disabled = false;
+
+            var tax = document.getElementById("iTax").value = x * 0.12;
+            var total = document.getElementById("iTotal").value = x + tax;
+            var y = document.getElementById("iAmtpaid").value = x + tax;
+            document.getElementById("iChange").value = y - total;
+        }
+        if(x >= 100){
+            btn1.style.backgroundColor = "green";
+            btn1.disabled = false;
+        }
+    }
+    function test1(){
+        var x = document.getElementById("iSubtotal").value;
+        x = parseInt(x);
+        
+        var tax = document.getElementById("iTax").value = x * 0.12;
+        var total = document.getElementById("iTotal").value = x + tax;
+        var y = document.getElementById("iAmtpaid").value;
+        y = parseInt(y);
+        document.getElementById("iChange").value = y - total;
+    }
+    
+    </script>
+</body>
 </html>
---->
