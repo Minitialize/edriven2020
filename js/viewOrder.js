@@ -71,7 +71,7 @@ viewOrders.forEach(function(viewOrder){
                         cardBody.appendChild(cardQty)
                         card.appendChild(image)
                         card.appendChild(cardBody)
-                        viewItemBody.appendChild(card).
+                        viewItemBody.appendChild(card)
                     }
                 }
             }
